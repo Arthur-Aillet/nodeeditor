@@ -4,6 +4,7 @@
 
 #include <QtCore/QObject>
 #include <QtCore/QString>
+#include <qqmlintegration.h>
 
 #include "Export.hpp"
 
@@ -15,8 +16,12 @@ namespace QtNodes {
  */
 struct NODE_EDITOR_PUBLIC NodeDataType
 {
+    Q_GADGET
+    public:
     QString id;
     QString name;
+    Q_PROPERTY(QString id MEMBER id)
+    Q_PROPERTY(QString name MEMBER name)
 };
 
 /**
