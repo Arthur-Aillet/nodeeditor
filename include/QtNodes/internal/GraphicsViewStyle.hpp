@@ -19,7 +19,7 @@ public:
 public:
     static void setStyle(QString jsonText);
 
-private:
+protected:
     void loadJson(QJsonObject const &json) override;
 
     QJsonObject toJson() const override;
